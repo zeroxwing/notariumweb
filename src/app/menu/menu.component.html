@@ -1,0 +1,8 @@
+<mat-toolbar color="primary">
+  <span routerLink="/home">Notarium</span>
+  <button mat-flat-button [matMenuTriggerFor]="registro" color="primary">Repertorio</button>
+  <mat-menu #registro="matMenu">
+    <button mat-menu-item routerLink="/listar-repertorios" routerLinkActive="active">Listar</button>
+    <button mat-menu-item routerLink="/crear-repertorio">Crear</button>
+  </mat-menu>
+</mat-toolbar>

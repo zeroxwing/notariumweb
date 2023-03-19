@@ -1,0 +1,55 @@
+<app-menu></app-menu>
+<div class="contenedor">
+  <mat-card class="mat-card">
+    <mat-card-title>Crear nuevo repertorio</mat-card-title>
+    <mat-form-field>
+      <mat-label>Fecha Anotación</mat-label>
+      <input matInput [matDatepicker]="picker1" #anotationDate>
+      <mat-hint>MM/DD/YYYY</mat-hint>
+      <mat-datepicker-toggle matIconSuffix [for]="picker1"></mat-datepicker-toggle>
+      <mat-datepicker #picker1></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Partes</mat-label>
+      <input matInput #parts>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Abogados</mat-label>
+      <input matInput #lawyers>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Acta Contrato</mat-label>
+      <input matInput #contractAct>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Fecha Presentación</mat-label>
+      <input matInput [matDatepicker]="picker2" #presentationDate>
+      <mat-hint>MM/DD/YYYY</mat-hint>
+      <mat-datepicker-toggle matIconSuffix [for]="picker2"></mat-datepicker-toggle>
+      <mat-datepicker #picker2></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Contenido</mat-label>
+      <input matInput #content>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Total Páginas</mat-label>
+      <input matInput #totalPages>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Total Escritas</mat-label>
+      <input matInput #totalWrites>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Nombre Requiriente</mat-label>
+      <input matInput #requestName>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>DNI</mat-label>
+      <input matInput #dni>
+    </mat-form-field>
+        <button mat-raised-button color="primary" type="submit" (click)="crear(anotationDate.value, parts.value,
+        lawyers.value, contractAct.value, presentationDate.value, content.value, totalPages.value, totalWrites.value,
+        requestName.value, dni.value)">Crear</button>
+  </mat-card>
+</div>

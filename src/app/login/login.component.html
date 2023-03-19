@@ -1,0 +1,18 @@
+<div class="contenedor">
+  <mat-card class="mat-card">
+    <mat-card-title>login</mat-card-title>
+      <mat-form-field appearance="outline">
+        <mat-label>Usuario</mat-label>
+        <input matInput #usuario>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Contraseña</mat-label>
+        <input matInput #passwd [type]="hide ? 'password' : 'text'">
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+      </mat-form-field>
+      <button mat-raised-button color="primary" type="submit" (click)="login(usuario.value, passwd.value)">Ingresar</button>
+  </mat-card>
+</div>
+
